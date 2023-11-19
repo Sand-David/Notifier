@@ -1,10 +1,16 @@
-from Notification import Notifier
+from notification import Notifier
+import yfinance as yf
 
 class CoinReader(Notifier):
-    SOURCE_URL = 'tradingview.com'
+    SOURCE_URL = 'coin.com'
+
     def __init__(self, coins: list):
-        print("test")
-        super().__init__(coins, self.SOURCE_URL)
+        super().__init__(coins)
         
-    def get_url(self):
-        return self.SOURCE_URL
+    def getInfo(self):
+        print("overwritten method")
+        for coin in self.registered_assets:
+            print(f"Coin {coin} has been selected...")
+            print(f"prepare info from  {self.url}")
+            ticker = yf.Ticker(coin)
+            print(ticker.history(period="1mo")['open'])

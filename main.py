@@ -1,5 +1,14 @@
-from Reader import CoinReader
+from reader import CoinReader
+import trigger
+def get_asset_list():
+    asset_file = open(r'C:\Users\David\Projects\Notifier\kryptos.txt', 'r')
+    return list(asset_file.read().splitlines())
 
-c = CoinReader([1,2,3])
 
-c.getInfo()
+test = {'BTC': 1, 'ETH': 2}
+trigger.fetch_triggered_assets(test)
+
+# c = CoinReader(get_asset_list())
+
+# c.getInfo()
+
