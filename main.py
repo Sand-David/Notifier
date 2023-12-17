@@ -5,8 +5,10 @@ def get_asset_list():
     return list(asset_file.read().splitlines())
 
 def main():
-    test = {'BTC': 1, 'ETH': 2}
-    trigger.fetch_triggered_assets(test)
+    #test = {'BTC': 1, 'ETH': 2}
+    test = ['BTC', 'ETH']
+
+    trigger.init_overview(test)
 
 # c = CoinReader(get_asset_list())
 
