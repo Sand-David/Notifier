@@ -3,7 +3,7 @@ from window import Window
 
 def fetch_triggered_assets(assets: dict = {}):
     #menue = tk.Tk()
-    menue = Window(10, 20)
+    menue = Window(title="Übersicht")
 
     if not assets:
         info = tk.Label(text="There are no triggered asset values.").pack()
@@ -17,6 +17,7 @@ def fetch_triggered_assets(assets: dict = {}):
     
     tk.Button(menue, text='Show Details').pack()
     tk.Button(menue, text='Abort', command=menue.destroy).pack()
+    tk.Frame(background='lightgreen').pack()
     menue.mainloop()
     return 
         
