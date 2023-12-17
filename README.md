@@ -1,4 +1,4 @@
-## Currently this projects is stil under construction. As my first public project I am looking for feedback and suggestions for imporvement are welcome. 
+## !!! Currently this projects is stil under construction. As my first public project I am looking for feedback and suggestions for imporvement are welcome. 
 
 
 # Wallet Notification
